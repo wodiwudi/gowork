@@ -14,8 +14,8 @@ package leetcode
 
 [3,9,20,15,7]
 */
-//广度优先遍历  BFS
-func levelOrder(root *TreeNode) []int {
+//广度优先遍历  BFS  建立队列，每次放进一个node，再
+func levelOrderBFS(root *TreeNode) []int {
 	if root == nil {
 		return nil
 	}
@@ -29,10 +29,15 @@ func levelOrder(root *TreeNode) []int {
 		queue = queue[1:]
 		return node
 	}
-	for {
-		if root.Left != nil {
-			push(root.Left)
+	for len(queue) != 0 {
+		node := pop()
+		res = append(res, node.Val)
+		if node.Left != nil {
+			push(node.Left)
+		}
+		if node.Right != nil {
+			push(node.Right)
 		}
 	}
-
+	return res
 }
