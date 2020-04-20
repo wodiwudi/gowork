@@ -1,0 +1,11 @@
+package Singleton
+
+import "testing"
+
+func TestGetSingleton(t *testing.T) {
+	sin1 := GetSingleton()
+	sin2 := GetSingleton()
+	if sin1 != sin2 {
+		t.Error("实例不一样")
+	}
+}

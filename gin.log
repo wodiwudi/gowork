@@ -1,0 +1,41 @@
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /test                     --> main.main.func1 (3 handlers)
+[GIN-debug] Environment variable PORT is undefined. Using port :8080 by default
+[GIN-debug] Listening and serving HTTP on :8080
+
+
+[31m2019/11/20 16:00:38 [Recovery] 2019/11/20 - 16:00:38 panic recovered:
+GET /test?name=1 HTTP/1.1
+Host: 127.0.0.1:8080
+Accept: */*
+User-Agent: curl/7.64.1
+
+
+%!s(int=1)
+/Users/admin/Desktop/Sites/gowork/src/test/test_gin/middleware_gin/main.go:19 (0x1506b78)
+	main.func1: panic(1)
+/Users/admin/Desktop/Sites/gowork/src/github.com/gin-gonic/gin/context.go:147 (0x14f194a)
+	(*Context).Next: c.handlers[c.index](c)
+/Users/admin/Desktop/Sites/gowork/src/github.com/gin-gonic/gin/recovery.go:83 (0x15050b3)
+	RecoveryWithWriter.func1: c.Next()
+/Users/admin/Desktop/Sites/gowork/src/github.com/gin-gonic/gin/context.go:147 (0x14f194a)
+	(*Context).Next: c.handlers[c.index](c)
+/Users/admin/Desktop/Sites/gowork/src/github.com/gin-gonic/gin/logger.go:241 (0x15041e0)
+	LoggerWithConfig.func1: c.Next()
+/Users/admin/Desktop/Sites/gowork/src/github.com/gin-gonic/gin/context.go:147 (0x14f194a)
+	(*Context).Next: c.handlers[c.index](c)
+/Users/admin/Desktop/Sites/gowork/src/github.com/gin-gonic/gin/gin.go:403 (0x14fb649)
+	(*Engine).handleHTTPRequest: c.Next()
+/Users/admin/Desktop/Sites/gowork/src/github.com/gin-gonic/gin/gin.go:364 (0x14fad3d)
+	(*Engine).ServeHTTP: engine.handleHTTPRequest(c)
+/Users/admin/sdk/go1.13.1/src/net/http/server.go:2802 (0x12cb323)
+	serverHandler.ServeHTTP: handler.ServeHTTP(rw, req)
+/Users/admin/sdk/go1.13.1/src/net/http/server.go:1890 (0x12c6bc4)
+	(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)
+/Users/admin/sdk/go1.13.1/src/runtime/asm_amd64.s:1357 (0x105bd20)
+	goexit: BYTE	$0x90	// NOP
+[0m
+[GIN] 2019/11/20 - 16:00:38 | 500 |    1.276604ms |       127.0.0.1 | GET      /test?name=1
