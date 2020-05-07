@@ -17,6 +17,7 @@ package leetcode
    \   \
    3    3
 */
+//递归做法
 func isSymmetric(root *TreeNode) bool {
 	//自顶向下递归
 	if root == nil {
@@ -34,4 +35,37 @@ func isEqualsTree(left, right *TreeNode) bool {
 		return false
 	}
 	return isEqualsTree(left.Left, right.Right) && isEqualsTree(left.Right, right.Left)
+}
+
+//迭代做法 广度优先 一次pop两个，一次push两个
+func isSymmetric2(root *TreeNode) bool {
+	if root == nil {
+		return true
+	}
+	arr := []*TreeNode{root, root}
+	pop := func() *TreeNode {
+		tmp := arr[0]
+		arr = arr[1:]
+		return tmp
+	}
+	push := func(root1, root2 *TreeNode) {
+		arr = append(arr, root1, root2)
+	}
+	for len(arr) != 0 {
+		t1 := pop()
+		t2 := pop()
+
+		if t1 == nil && t2 == nil {
+			continue
+		}
+		if t1 == nil || t2 == nil {
+			return false
+		}
+		if t1.Val != t2.Val {
+			return false
+		}
+		push(t1.Left, t2.Right)
+		push(t1.Right, t2.Left)
+	}
+	return true
 }
