@@ -2,6 +2,7 @@ package leetcode
 
 import (
 	"fmt"
+	"strings"
 	"testing"
 )
 
@@ -62,4 +63,21 @@ func getPublic(s1, s2 string) string {
 
 func TestFivetyEight(t *testing.T) {
 	fmt.Println(longestCommonPrefix([]string{"flower", "flow", "flight"}))
+}
+
+//小浩算法
+func longestCommonPrefix2(strs []string) string {
+	if len(strs) < 1 {
+		return ""
+	}
+	prefix := strs[0]
+	for _, v := range strs {
+		for strings.Index(v, prefix) != 0 {
+			if len(prefix) == 0 {
+				return ""
+			}
+			prefix = prefix[:len(prefix)-1] //前缀不断减一，循环中判断子串是否从0开始，不是0则不为公共子串
+		}
+	}
+	return prefix
 }
