@@ -41,11 +41,11 @@ func bubbleOrders(arr []int) []int {
 
 //插入排序
 func selectOrders(arr []int) []int {
-	length := len(arr)
-	for i := 0; i < length; i++ {
+	for i := 0; i < len(arr); i++ {
 		pre := i - 1
-		current := arr[i]
+		current := arr[i] //5, 1, -1, -8, -10, 9, 0, 11
 		for pre >= 0 && arr[pre] > current {
+			fmt.Println("current :", current, "arr[i] :", arr[i])
 			arr[pre+1] = arr[pre]
 			pre--
 		}
@@ -65,9 +65,9 @@ func combineOrders(arr []int) []int {
 }
 func merges(leftArr, rightArr []int) []int {
 	i, j := 0, 0
-	lenLeft, lenRight := len(leftArr), len(rightArr)
+	lenleft, lenright := len(leftArr), len(rightArr)
 	result := []int{}
-	for i < lenLeft && j < lenRight {
+	for i < lenleft && j < lenright {
 		if leftArr[i] > rightArr[j] {
 			result = append(result, rightArr[j])
 			j++
@@ -112,7 +112,6 @@ func findPivots(arr []int, start, end int) int {
 			arr[left], arr[right] = arr[right], arr[left]
 		}
 	}
-	fmt.Println("pivot :", pivot, "arr[start] :", arr[start], "left", left)
 	arr[start], arr[left] = arr[left], arr[start]
 	return left
 }

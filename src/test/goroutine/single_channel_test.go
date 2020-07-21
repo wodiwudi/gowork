@@ -3,12 +3,13 @@ package main
 import (
 	"fmt"
 	"sync"
+	"testing"
 )
 
-func main() {
+func TestSingleChannel(t *testing.T) {
 	var wg sync.WaitGroup
 	wg.Add(2)
-	c := make(chan int)
+	c := make(chan int, 0)
 	var send chan<- int = c
 	var recv <-chan int = c
 
@@ -27,6 +28,5 @@ func main() {
 			send <- i
 		}
 	}()
-
 	wg.Wait()
 }
