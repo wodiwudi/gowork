@@ -8,7 +8,7 @@ import (
 	"testing"
 )
 
-// Test verifies that encoding and decoding a complex data value
+// XiaoMiTest verifies that encoding and decoding a complex data value
 // produces an equal result.
 //
 // The test does not make direct assertions about the encoded output

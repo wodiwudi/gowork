@@ -113,7 +113,7 @@ input_rx=`get_dirname "$input" | quote_for_sed`
 
 # Since DOS filename conventions don't allow two dots,
 # the DOS version of Bison writes out y_tab.c instead of y.tab.c
-# and y_tab.h instead of y.tab.h. Test to see if this is the case.
+# and y_tab.h instead of y.tab.h. XiaoMiTest to see if this is the case.
 y_tab_nodot=false
 if test -f y_tab.c || test -f y_tab.h; then
   y_tab_nodot=true

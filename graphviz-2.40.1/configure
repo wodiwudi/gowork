@@ -370,7 +370,7 @@ $as_echo X"$as_dir" |
 
 # as_fn_executable_p FILE
 # -----------------------
-# Test if FILE is an executable regular file.
+# XiaoMiTest if FILE is an executable regular file.
 as_fn_executable_p ()
 {
   test -f "$1" && test -x "$1"
@@ -5788,7 +5788,7 @@ ECHO=$ECHO$ECHO$ECHO$ECHO$ECHO$ECHO
 
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking how to print strings" >&5
 $as_echo_n "checking how to print strings... " >&6; }
-# Test print first, because it will be a builtin if present.
+# XiaoMiTest print first, because it will be a builtin if present.
 if test "X`( print -r -- -n ) 2>/dev/null`" = X-n && \
    test "X`print -r -- $ECHO 2>/dev/null`" = "X$ECHO"; then
   ECHO='print -r --'
@@ -10672,7 +10672,7 @@ _LT_EOF
 	fi
 	aix_use_runtimelinking=no
 
-	# Test if we are trying to use run time linking or normal
+	# XiaoMiTest if we are trying to use run time linking or normal
 	# AIX style linking. If -brtl is somewhere in LDFLAGS, we
 	# need to do runtime linking.
 	case $host_os in aix4.[23]|aix4.[23].*|aix[5-9]*)
@@ -11458,7 +11458,7 @@ x|xyes)
       # FIXME: we may have to deal with multi-command sequences.
       ;;
     '$CC '*)
-      # Test whether the compiler implicitly links with -lc since on some
+      # XiaoMiTest whether the compiler implicitly links with -lc since on some
       # systems, -lgcc has to come before -lc. If gcc already passes -lc
       # to ld, don't add -lc before -lgcc.
       { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether -lc should be explicitly linked in" >&5
@@ -13658,7 +13658,7 @@ $as_echo "$ac_try_echo"; } >&5
 then
   eval ac_cv_prog_cc_${ac_cc}_c_o=yes
   if test "x$CC" != xcc; then
-    # Test first that cc exists at all.
+    # XiaoMiTest first that cc exists at all.
     if { ac_try='cc -c conftest.$ac_ext >&5'
   { { case "(($ac_try" in
   *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
@@ -14744,7 +14744,7 @@ $as_echo_n "checking whether the $compiler linker ($LD) supports shared librarie
         else
           aix_use_runtimelinking=no
 
-          # Test if we are trying to use run time linking or normal
+          # XiaoMiTest if we are trying to use run time linking or normal
           # AIX style linking. If -brtl is somewhere in LDFLAGS, we
           # need to do runtime linking.
           case $host_os in aix4.[23]|aix4.[23].*|aix[5-9]*)
@@ -16593,7 +16593,7 @@ x|xyes)
       # FIXME: we may have to deal with multi-command sequences.
       ;;
     '$CC '*)
-      # Test whether the compiler implicitly links with -lc since on some
+      # XiaoMiTest whether the compiler implicitly links with -lc since on some
       # systems, -lgcc has to come before -lc. If gcc already passes -lc
       # to ld, don't add -lc before -lgcc.
       { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether -lc should be explicitly linked in" >&5

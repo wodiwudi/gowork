@@ -8033,7 +8033,7 @@ EOF
       old_library=
       dlname=
 
-      # Test again, we may have decided not to build it any more
+      # XiaoMiTest again, we may have decided not to build it any more
       if test "$build_libtool_libs" = yes; then
 	# Remove ${wl} instances when linking with ld.
 	# FIXME: should test the right _cmds variable.

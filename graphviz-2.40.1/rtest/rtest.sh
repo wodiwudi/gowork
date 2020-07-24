@@ -21,7 +21,7 @@ fi
 # csh, ksh88 filter
 (( 1.5 == 1 )) && { echo "Graphviz test suite requires ksh93"; exit 1; } 
 
-TESTFILE=tests.txt     # Test specifications
+TESTFILE=tests.txt     # XiaoMiTest specifications
 GRAPHDIR=graphs        # Directory of input graphs and data
 OUTDIR=ndata           # Directory for test output
 OUTHTML=nhtml          # Directory for html test report

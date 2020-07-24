@@ -178,7 +178,7 @@ else
         aix_use_runtimelinking=no
       else
         aix_use_runtimelinking=no
-        # Test if we are trying to use run time linking or normal
+        # XiaoMiTest if we are trying to use run time linking or normal
         # AIX style linking. If -brtl is somewhere in LDFLAGS, we
         # need to do runtime linking.
         case $host_os in aix4.[23]|aix4.[23].*|aix5*)
